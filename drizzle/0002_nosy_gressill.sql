@@ -1,0 +1,1 @@
+ALTER TABLE `absence` ADD `nevim` text DEFAULT 'defaultni_hodnota';

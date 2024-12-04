@@ -17,8 +17,7 @@ export const absence = sqliteTable('absence', {
 	id_zaka: integer('id_zaka').references(()  => zak.id_zaka),
 	duvod: text('duvod'),
 	datum: date('datum'),
-	omluvena: boolean('omluvena')
-	
+	nevim: text('nevim')
 });
 
 export const rozvrh = sqliteTable('rozvrh', {

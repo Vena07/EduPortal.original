@@ -1,0 +1,222 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "8fc6d990-0b79-4f86-b6a2-65a87524144d",
+  "prevId": "7c3bdd17-8714-48a1-b4a4-2046911ecfaa",
+  "tables": {
+    "absence": {
+      "name": "absence",
+      "columns": {
+        "id_absence": {
+          "name": "id_absence",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "id_zaka": {
+          "name": "id_zaka",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "duvod": {
+          "name": "duvod",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "datum": {
+          "name": "datum",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "nevim": {
+          "name": "nevim",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false,
+          "default": "'defaultni_hodnota'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "absence_id_zaka_zak_id_zaka_fk": {
+          "name": "absence_id_zaka_zak_id_zaka_fk",
+          "tableFrom": "absence",
+          "tableTo": "zak",
+          "columnsFrom": [
+            "id_zaka"
+          ],
+          "columnsTo": [
+            "id_zaka"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "rozvrh": {
+      "name": "rozvrh",
+      "columns": {
+        "id_rozvrh": {
+          "name": "id_rozvrh",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "id_trida": {
+          "name": "id_trida",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "den": {
+          "name": "den",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "one_hodina": {
+          "name": "one_hodina",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "two_hodina": {
+          "name": "two_hodina",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "three_hodina": {
+          "name": "three_hodina",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "four_hodina": {
+          "name": "four_hodina",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "five_hodina": {
+          "name": "five_hodina",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "rozvrh_id_trida_trida_id_trida_fk": {
+          "name": "rozvrh_id_trida_trida_id_trida_fk",
+          "tableFrom": "rozvrh",
+          "tableTo": "trida",
+          "columnsFrom": [
+            "id_trida"
+          ],
+          "columnsTo": [
+            "id_trida"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "trida": {
+      "name": "trida",
+      "columns": {
+        "id_trida": {
+          "name": "id_trida",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "nazev": {
+          "name": "nazev",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "zak": {
+      "name": "zak",
+      "columns": {
+        "jmeno": {
+          "name": "jmeno",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "id_zaka": {
+          "name": "id_zaka",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "id_trida": {
+          "name": "id_trida",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "zak_id_trida_trida_id_trida_fk": {
+          "name": "zak_id_trida_trida_id_trida_fk",
+          "tableFrom": "zak",
+          "tableTo": "trida",
+          "columnsFrom": [
+            "id_trida"
+          ],
+          "columnsTo": [
+            "id_trida"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

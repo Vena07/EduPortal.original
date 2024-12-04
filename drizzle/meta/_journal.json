@@ -8,6 +8,41 @@
       "when": 1733223916409,
       "tag": "0000_even_firelord",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1733320990705,
+      "tag": "0001_uneven_kitty_pryde",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1733321797967,
+      "tag": "0002_nosy_gressill",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1733321912647,
+      "tag": "0003_eager_marrow",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1733322183878,
+      "tag": "0004_perpetual_slyde",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1733323635131,
+      "tag": "0005_foamy_blockbuster",
+      "breakpoints": true
     }
   ]
 }

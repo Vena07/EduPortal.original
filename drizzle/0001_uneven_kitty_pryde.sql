@@ -1,0 +1,1 @@
+ALTER TABLE `absence` DROP COLUMN `omluvena`;
